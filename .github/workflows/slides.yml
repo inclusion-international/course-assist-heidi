@@ -8,7 +8,9 @@ jobs:
       - name: Get Code
         uses: actions/checkout@v3
       - name: Get Submodules
-        run: git submodule init && git submodule update
+        run: |
+          git config --global --add safe.directory /__w/course-assist-heidi/course-assist-heidi
+          git submodule init && git submodule update
       - name: Build Slides `rapid-prototyping.pdf`
         run: latexmk rapid-prototyping.tex
       - name: Cleanup
