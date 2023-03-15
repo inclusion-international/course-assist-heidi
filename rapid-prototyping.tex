@@ -1,0 +1,426 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme[style=noir]{fhtw}
+\usepackage{preamble}
+
+\title[Rapid Prototyping]{Rapid Prototyping}
+\subtitle{CI - ASSIST HEIDI}
+\author{Alija Sabic, \glsentrytext{msc}}
+\mail{sabic.alija@gmail.com}
+\institute{Department Electronic Engineering}
+
+\NewDocumentCommand{\res}{ m }{``\usebibentry{#1}{title}'', \usebibentry{#1}{url}, \cite{#1}}
+
+% \setlength{\parindent}{1em}
+\setlength{\parskip}{1em}
+
+\begin{document}
+
+\begin{frame}[plain]
+    \titlepage
+\end{frame}
+
+% \section{Introduction}
+\section{Literature}
+\begin{frame}
+    \begin{itemize}
+        \item \res{fasterman:2012}
+        \item \res{benchoff:2014:1}
+        \item \res{benchoff:2014:2}
+        \item \res{hubs}
+    \end{itemize}
+\end{frame}
+
+\section{Rapid Prototyping}
+
+\begin{frame}
+    \par \textit{Generative/additive manufacturing processes}.
+    The object is formed directly from shapeless or shape-neutral starting materials by physical or chemical processes directly form the object.
+    In contrast, there is \textit{subtractive manufacturing processes}, for instance.
+    \par Classification also according to use:
+    \begin{description}
+        \item[Rapid Prototyping] the product is used as a prototype.
+        \item[Rapid Tooling] the product is used as a tool.
+        \item[Rapid Manufacturing] the product is used directly.
+    \end{description}
+\end{frame}
+
+\section{Technologies}
+
+\begin{frame}
+
+\end{frame}
+
+\subsection{\glsentrydesc{fdm}}
+\begin{frame}
+    \begin{itemize}
+        \item \gls{fdm} \texttrademark
+        \item \gls{fff} (free term)
+    \end{itemize}
+\end{frame}
+
+\subsection{FabLabs}
+\begin{frame}
+    \par Fabrication Laboratory
+    \begin{itemize}
+        \item Open workplaces
+        \item Typical machines
+              \begin{itemize}
+                  \item 3D printers
+                  \item Laser cutters
+                  \item \acs{cnc} machines
+                  \item Presses
+                  \item \ldots
+              \end{itemize}
+        \item Vienna: HappyLab or MetaLab
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Social Impact}
+    \begin{block}{The Economist, A third industrial revolution}
+        ``As manufacturing goes digital, a third great change is now gathering space.
+        It will allow things to be made economically in much smaller numbers, more flexibly and with a much lower input of labor.''
+    \end{block}
+    \begin{itemize}
+        \item Decentralization of production (shift towards consumers)
+        \item Sustainability and democratization $\rightarrow$ maker movement
+        \item Discussion about patents and licensing
+    \end{itemize}
+\end{frame}
+
+\section{3D Printing}
+\subsection{\glsentrydesc{fdm}}
+\begin{frame}
+    \begin{itemize}
+        \item Material (filament) is applied layer by layer
+        \item Movable print head
+        \item Precision down to \SI{0.1}{\milli\meter} possible (typical: \SIrange{0.3}{0.5}{\milli\meter})
+        \item Speed and precision depends on diameter (typical \SI{0.4}{\milli\meter})
+        \item Material: \SI{1.75}{\milli\meter} or \SI{3}{\milli\meter} diameter
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+
+\end{frame}
+
+\subsection{\glsentrydesc{dlp}}
+\begin{frame}
+    \begin{itemize}
+        \item Liquid photopolymers (photosensitive)
+        \item Printed object is pulled out of the material from bottom to top
+        \item Each layer is partially cured by \acs{uv} light projector
+        \item Higher precision than with \acs{fff} is possible
+        \item Prices are also decreasing (inexpensive printers $\approx$ \SI{250}{\sieuro})
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+
+\end{frame}
+
+\subsection{\glsentrydesc{sls}}
+
+\begin{frame}
+    \begin{itemize}
+        \item Laser beam heats powdery material
+        \item Melting or sintering
+        \item Expensive to purchase
+        \item High powder wear
+    \end{itemize}
+\end{frame}
+
+\subsection{Materials}
+\begin{frame}
+    \begin{itemize}
+        \item \acs{pla}
+              \begin{itemize}
+                  \item Polyactide, biocompatible/biodegradable
+                  \item Printing temperature: $\approx$ \SI{200}{\celsius}
+                  \item Easiest material for \acs{fff} printing
+              \end{itemize}
+        \item Biocompounds
+              \begin{itemize}
+                  \item Plastics produced from biological feedstock
+                  \item Various properties, e.g. GreenTec from Extrudr
+                        \begin{itemize}
+                            \item Biodegradable
+                            \item Food safe
+                            \item Dimensionally stable up to \SI{120}{\celsius}
+                        \end{itemize}
+              \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+        \item \acs{abs}
+              \begin{itemize}
+                  \item \acl{abs} copolymers
+                  \item Recyclable (non-biodegradable)
+                  \item Printing temperature: $\approx$ \SI{220}{\celsius}
+                  \item Somewhat difficult material for \acs{fff} printing
+                  \item Very resilient
+              \end{itemize}
+        \item \acs{petg}
+              \begin{itemize}
+                  \item \acl{petg}
+                  \item Recyclable (non-biodegradable)
+                  \item Printing temperature: $\approx$ \SI{250}{\celsius}
+                  \item Food safe
+                  \item Easy to use
+                  \item Not all printers can work without problems at this high temperature
+              \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+        \item \acs{pva}
+              \begin{itemize}
+                  \item \acl{pva}
+                  \item Water-soluble
+                  \item Printing temperature: $\approx$ \SI{200}{\celsius}
+                  \item Used as support material and dissolved in water after printing
+              \end{itemize}
+        \item Photopolymer
+              \begin{itemize}
+                  \item Used in \acs{dlp} printers
+                  \item Composition depends on manufacturer
+              \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\subsection{Workflow}
+\begin{frame}
+    \begin{enumerate}
+        \item Plan/model the model (or use existing model)
+        \item Export the model in \acs{stl} format (\acs{cad} software)
+        \item Convert \acs{stl} file into printer compatible layer model (slicer)
+        \item Export layer model to G-code (for \acs{fff}, but not for \acs{dlp})
+        \item Print
+    \end{enumerate}
+\end{frame}
+
+\subsection{\glsentrytext{stl} Files}
+\begin{frame}
+    \begin{itemize}
+        \item \acl{stl}
+        \item Description by single triangle facets
+        \item Generates only an approximation
+        \item Especially difficult: curves/round bodies
+    \end{itemize}
+    \begin{exampleblock}{}
+        Generated from 3D modeling software or downloaded from the internet.
+        Platform compatible, can be used for any generative manufacturing process.
+    \end{exampleblock}
+\end{frame}
+
+\subsection{Slicing}
+\begin{frame}
+    \begin{itemize}
+        \item Creates a layer model from \acs{stl} files
+        \item Every movement of the print head is calculated (only for \acs{fff})
+        \item Many adjustment possibilities
+        \item Accuracy/speed/material of print if defined here
+    \end{itemize}
+    \begin{exampleblock}{}
+        The slicer generates G-code from the \acs{stl} file.
+        This G-code depends on: printer, material, speed, accuracy, etc.
+        In \acs{dlp} printing, a projected image is created for each layer.
+    \end{exampleblock}
+\end{frame}
+
+\subsection{G-code}
+\begin{frame}
+    \begin{itemize}
+        \item \acs{rs}-274, originally for \acs{cnc} machines (only for \acs{fff})
+        \item Pure text description of the execution of the commands
+        \item G-code is sent to the 3D printer either via an external medium (\acs{usb} stick, \acs{sd} card) or via cable
+        \item \texttt{G} \ldots\, movement of the tool/print head
+        \item \texttt{M} \ldots\, miscellaneous functions
+        \item \texttt{F} \ldots\, feed
+        \item \texttt{X/Y/Z} \ldots\, absolute or relative x, y, z coordinates
+    \end{itemize}
+    \begin{exampleblock}{}
+        G-code expresses the exact instructions for the 3D printer.
+        The commands are printer and material specific.
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}
+    \begin{listing}[H]
+        \inputsource[]{gcode}{gcode/example.gcode}
+        \caption{G-code example}
+        \label{lst:gcode:example}
+    \end{listing}
+\end{frame}
+
+\section{Software and Platforms}
+
+\subsection{Thingiverse}
+\begin{frame}
+    \begin{itemize}
+        \item Platform for the exchange of 3D models
+        \item Extensive collection
+        \item Many \acs{at} models
+        \item Attention: not all models are suitable for \acs{fff}
+    \end{itemize}
+\end{frame}
+
+\subsection{\glsentrytext{cad}}
+\subsubsection{Commercial}
+\begin{frame}
+    \begin{itemize}
+        \item SolidWorks
+        \item Auto\acs{cad}
+        \item \acs{catia}
+        \item SketchUp
+        \item Inventor
+        \item Fusion360
+        \item SolidEdge
+    \end{itemize}
+\end{frame}
+
+\subsubsection{Free}
+\begin{frame}
+    \begin{itemize}
+        \item Free\acs{cad}
+        \item Blender
+        \item AutoDesk Inventor
+        \item OnShape
+        \item OpenSCAD
+        \item Libre\acs{cad}
+        \item 123D (discontinued)
+    \end{itemize}
+\end{frame}
+
+\section{Laser Cutter}
+
+\subsection{Technology}
+
+\begin{frame}
+    \begin{itemize}
+        \item Subtractive cutting/engraving by concentrated radiation
+        \item Ablation: material removal by heating up
+        \item Absorption of energy in the material
+        \item Continuous or pulsed laser beams
+        \item Almost all materials can be processed
+    \end{itemize}
+\end{frame}
+
+\subsection{Laser}
+
+\begin{frame}
+    \begin{itemize}
+        \item Electromagnetic waves
+        \item High intensity
+        \item Monochromatic wavelength
+        \item Sharp focussing
+        \item For laser cutting: infrared light
+    \end{itemize}
+\end{frame}
+
+\subsection{Advantages}
+
+\begin{frame}
+    \begin{itemize}
+        \item Complex outlines possible
+        \item Precise
+        \item Fast
+        \item Low minimum number of copies
+        \item Cutting/engraving in one step possible
+    \end{itemize}
+\end{frame}
+
+\subsection{Disadvantages}
+
+\begin{frame}
+    \begin{itemize}
+        \item High acquisition cost
+        \item Hazard protection
+        \item Low electrical efficiency ($\approx$ \SI{20}{\percent})
+        \item Repeatability (especially for low cost machines)
+        \item Many, but not all materials possible
+    \end{itemize}
+\end{frame}
+
+\subsection{Products}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\subsection{Examples}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\section{Other Technologies}
+
+\subsection{Lego \texttrademark}
+
+\begin{frame}
+    \begin{itemize}
+        \item Very fast
+        \item Modular
+        \item Many different elements
+        \item Combination with other technologies
+    \end{itemize}
+\end{frame}
+
+\subsection{Plaast/Instamorph}
+
+\begin{frame}
+    \begin{itemize}
+        \item Heatable polymer
+        \item Becomes soft with hot water
+        \item Hard at room temperature
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\subsection{\glsentrytext{pvc} Pipes}
+
+\begin{frame}
+    \begin{itemize}
+        \item Very cheap
+        \item Easy to obtain
+        \item Does not require special tools/machines
+        \item Therese Willkomm (``\acs{at} Solutions in Minutes'')
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\subsection{LocLine}
+
+\begin{frame}
+    \begin{itemize}
+        \item Cheap
+        \item Easy to obtain
+        \item Does not require special tools/machines
+        \item From \acs{cnc} industry (coolant hose)
+    \end{itemize}
+\end{frame}
+
+\appendix
+
+\begin{frame}[allowframebreaks]{Acronyms}
+    \glsadd{pvc}
+    \glsadd{sls}
+    \printglossary[type=\acronymtype, nonumberlist]
+\end{frame}
+
+\begin{frame}[allowframebreaks]{References}
+    \bibliography{references}
+\end{frame}
+
+\end{document}

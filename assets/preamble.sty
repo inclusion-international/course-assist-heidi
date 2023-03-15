@@ -1,0 +1,40 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{preamble}[2018/12/08 Document Preamble]
+
+% Acronyms
+\RequirePackage[acronym, shortcuts, nopostdot]{glossaries}
+\input{acronyms}
+
+% Bibliography
+\RequirePackage[square,numbers,sort]{natbib}
+\RequirePackage{usebib}
+\bibliographystyle{ieeetr}
+\bibinput{references}
+
+% Font
+\def\fontscale{0.85}
+\RequirePackage[no-math]{fontspec}
+\setmainfont{Ubuntu Light}[Scale=\fontscale]
+\setsansfont{Ubuntu Light}[Scale=\fontscale]
+\setmonofont{Ubuntu Mono}[Scale=\fontscale]
+\RequirePackage{xeCJK}
+\setCJKmainfont{Noto Sans SC}[Scale=\fontscale]
+\setCJKsansfont{Noto Sans SC}[Scale=\fontscale]
+\setCJKmonofont{Noto Sans SC}[Scale=\fontscale]
+
+% Hyperlinks
+\RequirePackage{hyperref}
+\hypersetup{colorlinks=true,anchorcolor=black,linkcolor=\primarycolor,citecolor=\primarycolor,urlcolor=\primarycolor}
+
+% Tables
+\RequirePackage{tabularray}
+
+% Captions
+\setlength{\abovecaptionskip}{0em}
+\setlength{\belowcaptionskip}{0em}
+
+% Units
+\RequirePackage{eurosym}
+\RequirePackage{siunitx}
+\DeclareSIUnit{\sieuro}{\mbox{\euro}}
+\sisetup{range-units=single,range-phrase=--}

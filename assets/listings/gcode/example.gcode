@@ -1,0 +1,17 @@
+G1 F2400
+G1 X139.633 Y36.008 E0.01198
+G1 X139.360 Y36.041 E0.00436
+G1 F2400
+G1 X139.110 Y36.073 E0.00737
+G1 F4800;_WIPE
+G1 X139.360 Y36.041 E-0.10480
+G1 E-0.69520 F2100.00000
+G1 Z5.600 F6000.000
+M107
+G4 ; wait
+M104 S0 ; turn off temperature
+M140 S0 ; turn off heatbed
+M107 ; turn off fan
+G1 X0 Y200; home X axis
+M84 ; disable motors
+; filament used = 28928.1mm (69.6cm3)
