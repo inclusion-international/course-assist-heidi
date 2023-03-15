@@ -1,0 +1,25 @@
+name: Slides
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: alija/texlive:course-assist-heidi
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v3
+      - name: Get Submodules
+        run: git submodule init && git submodule update
+      - name: Build Slides `rapid-prototyping.pdf`
+        run: latexmk rapid-prototyping.tex
+      - name: Cleanup
+        run: latexmk -c
+      - name: Prepare release
+        run: mkdir slides && cp build/*.pdf slides/
+      # - name: Deploy
+      #   run: |
+      #     find slides/ -name '*.pdf' -type f -exec curl -u ${{ secrets.NEXTCLOUD_USER }}:${{ secrets.NEXTCLOUD_TOKEN }} -T {} ${{ secrets.NEXTCLOUD }} \;
+      - name: Release Slides
+        uses: actions/upload-artifact@v3
+        with:
+          name: slides
+          path: slides
