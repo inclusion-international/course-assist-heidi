@@ -21,8 +21,8 @@ RUN git clone https://github.com/xyz2tex/svg2tikz
 RUN cd /slides/custom/FhtwStyle && python3 setup.py install
 RUN cd /slides/custom/VueLexer && python3 setup.py install
 # Inkscape
-RUN curl http://ftp.at.debian.org/debian/pool/main/i/inkscape/inkscape_1.2.1+ds-1+b1_amd64.deb --output inkscape_1.2.1.deb
-RUN apt install -y ./inkscape_1.2.1.deb
+RUN curl http://ftp.at.debian.org/debian/pool/main/i/inkscape/inkscape_1.2.2-2+b1_amd64.deb --output inkscape_1.2.2.deb
+RUN apt install -y ./inkscape_1.2.2.deb
 # https://github.com/paaguti/svg2tikz
 # https://github.com/xyz2tex/svg2tikz/issues/42
 # https://github.com/xyz2tex/svg2tikz/issues/62
