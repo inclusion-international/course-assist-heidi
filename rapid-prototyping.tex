@@ -47,11 +47,22 @@
 \section{Technologies}
 
 \begin{frame}
-
+    \begin{figure}
+        \includegraphics<1>[width=0.95\linewidth]{rapid-prototyping/additive-manufacturing-poster-3d_hubs.pdf}
+        % \includegraphics<2>[width=0.3\linewidth,trim=8mm 6cm 34cm 75mm, clip]{rapid-prototyping/additive-manufacturing-poster-3d_hubs.pdf}
+        % \includegraphics<3>[width=0.3\linewidth,trim=7cm 3cm 30cm 75mm, clip]{rapid-prototyping/additive-manufacturing-poster-3d_hubs.pdf}
+        \caption{Additive manufacturing technologies}
+    \end{figure}
 \end{frame}
 
 \subsection{\glsentrydesc{fdm}}
 \begin{frame}
+    \begin{figure}
+        \includegraphics[width=0.3\linewidth,trim=75mm 17.5cm 30.5cm 5cm, clip]{rapid-prototyping/additive-manufacturing-poster-3d_hubs.pdf}
+        \includegraphics[width=0.3\linewidth,trim=75mm 10.5cm 30.5cm 12cm, clip]{rapid-prototyping/additive-manufacturing-poster-3d_hubs.pdf}
+        \includegraphics[width=0.3\linewidth,trim=75mm 4.5cm 30.5cm 18cm, clip]{rapid-prototyping/additive-manufacturing-poster-3d_hubs.pdf}
+        \caption{\glsentrydesc{fdm}}
+    \end{figure}
     \begin{itemize}
         \item \gls{fdm} \texttrademark
         \item \gls{fff} (free term)
@@ -60,7 +71,7 @@
 
 \subsection{FabLabs}
 \begin{frame}
-    \par Fabrication Laboratory
+    % \par Fabrication Laboratory
     \begin{itemize}
         \item Open workplaces
         \item Typical machines
@@ -73,6 +84,20 @@
               \end{itemize}
         \item Vienna: HappyLab or MetaLab
     \end{itemize}
+    \begin{columns}
+        \begin{column}{0.55\textwidth}
+            \begin{figure}
+                \includegraphics[height=30mm]{rapid-prototyping/happylab.jpg}
+                \caption{HappyLab}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            \begin{figure}
+                \includegraphics[height=30mm]{rapid-prototyping/metalab.jpg}
+                \caption{MetaLab}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Social Impact}
@@ -100,7 +125,10 @@
 \end{frame}
 
 \begin{frame}
-
+    \begin{figure}
+        \includegraphics[width=\textwidth]{rapid-prototyping/fused-deposition-modeling.pdf}
+        \caption{\glsentrydesc{fdm}}
+    \end{figure}
 \end{frame}
 
 \subsection{\glsentrydesc{dlp}}
@@ -115,7 +143,10 @@
 \end{frame}
 
 \begin{frame}
-
+    \begin{figure}
+        \includegraphics[height=7cm]{rapid-prototyping/digital-light-processing.pdf}
+        \caption{\glsentrydesc{dlp}}
+    \end{figure}
 \end{frame}
 
 \subsection{\glsentrydesc{sls}}
@@ -127,6 +158,10 @@
         \item Expensive to purchase
         \item High powder wear
     \end{itemize}
+    \begin{figure}
+        \includegraphics[height=5cm]{rapid-prototyping/selective-laser-sintering.jpg}
+        \caption{\glsentrydesc{sls}}
+    \end{figure}
 \end{frame}
 
 \subsection{Materials}
@@ -265,6 +300,11 @@
         \item Many \acs{at} models
         \item Attention: not all models are suitable for \acs{fff}
     \end{itemize}
+    \begin{figure}
+        % https://www.thingiverse.com/thing:1104936
+        \includegraphics[height=4cm]{rapid-prototyping/thingiverse-canopener.jpg}
+        \caption{Pop Can Opener: Designed for People with Prosthetics or Severe Arthritis}
+    \end{figure}
 \end{frame}
 
 \subsection{\glsentrytext{cad}}
@@ -306,6 +346,11 @@
         \item Continuous or pulsed laser beams
         \item Almost all materials can be processed
     \end{itemize}
+    \begin{figure}
+        % https://commons.wikimedia.org/wiki/File:Bystronic_Laserschneiden.jpg
+        \includegraphics[height=4.5cm]{rapid-prototyping/bystronic-lasercutting.jpg}
+        \caption{Bystronic: Laser Cutting}
+    \end{figure}
 \end{frame}
 
 \subsection{Laser}
@@ -347,17 +392,75 @@
 \subsection{Products}
 
 \begin{frame}
+    \begin{columns}
+        \begin{column}[t]{0.5\textwidth}
+            \begin{itemize}
+                \item Manufacturer
+                      \begin{itemize}
+                          \item Trotec
+                          \item Epilog
+                                %   \item GCC
+                          \item Thunderlaser
+                          \item \ldots
+                      \end{itemize}
+            \end{itemize}
+        \end{column}
+        \begin{column}[t]{0.5\textwidth}
+            \begin{itemize}
+                \item \SIrange{20}{400}{\watt}
+                \item Industrial grade: up to \SI{8}{\kilo\watt}
+            \end{itemize}
+        \end{column}
+    \end{columns}
+    % \begin{itemize}
+    %     \item Manufacturer
+    %             \begin{itemize}
+    %                 \item Trotec
+    %                 \item Epilog
+    %                 \item GCC
+    %                 \item Thunderlaser
+    %                 \item \ldots
+    %             \end{itemize}
+    %     \item \SIrange{20}{400}{\watt}
+    %     \item Industrial grade: up to \SI{8}{\kilo\watt}
+    % \end{itemize}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                % https://www.happylab.at/de_vie/ausstattung#lasercutter
+                \includegraphics[height=4cm, trim=0mm 1.5cm 0mm 1cm, clip]{rapid-prototyping/trotec-speedy-400.jpg}
+                \caption{Trotec: Speedy 400}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \includegraphics[height=4cm, trim=0mm 1.5cm 0mm 1cm, clip]{rapid-prototyping/thunderlaser-nova63.jpg}
+                \caption{Thunderlaser: Nova63}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
-\begin{frame}
-\end{frame}
+% \begin{frame}
+% \end{frame}
 
 \subsection{Examples}
 
 \begin{frame}
+    \begin{figure}
+        % https://www.hackschool.org/post/creating-tabbed-boxes-in-inkscape
+        \includegraphics<1>[width=0.9\textwidth]{rapid-prototyping/laser-cut-box.jpg}
+        \includegraphics<2>[height=7.5cm, angle=90, origin=c]{rapid-prototyping/laser-cut-inkscape.png}
+        \caption{Laser Cut: Box of Wood}
+    \end{figure}
 \end{frame}
 
 \begin{frame}
+    \begin{figure}
+        % https://makerdesignlab.com/tutorials-tips/laser-cutting-beginners-guide/
+        \includegraphics[width=\textwidth]{rapid-prototyping/laser-cut-engraving.jpg}
+        \caption{Laser Cut: Engraving}
+    \end{figure}
 \end{frame}
 
 \section{Other Technologies}
@@ -371,6 +474,11 @@
         \item Many different elements
         \item Combination with other technologies
     \end{itemize}
+    \begin{figure}
+        % https://www.instructables.com/LEGO-3d-Printer/
+        \includegraphics[height=5cm]{rapid-prototyping/lego-3d-printer.jpg}
+        \caption{Lego \texttrademark: 3D Printer (Source: Instructables)}
+    \end{figure}
 \end{frame}
 
 \subsection{Plaast/Instamorph}
@@ -381,9 +489,18 @@
         \item Becomes soft with hot water
         \item Hard at room temperature
     \end{itemize}
+    \begin{figure}
+        % https://www.bengs-modellbau.de/material/baumaterial/plaast-kunststoff-1kg
+        \includegraphics[height=5cm]{rapid-prototyping/plaast.jpg}
+        \caption{Plaast (Polycaprolacton)}
+    \end{figure}
 \end{frame}
 
 \begin{frame}
+    \begin{figure}
+        \includegraphics[height=6cm]{rapid-prototyping/plaast-pipes.pdf}
+        \caption{Plaast: Pipes Mount}
+    \end{figure}
 \end{frame}
 
 \subsection{\glsentrytext{pvc} Pipes}
@@ -395,9 +512,27 @@
         \item Does not require special tools/machines
         \item Therese Willkomm (``\acs{at} Solutions in Minutes'')
     \end{itemize}
+    \begin{figure}
+        % https://organizedclassroom.com/pvc-pipe-solutions/
+        \includegraphics[height=4.5cm]{rapid-prototyping/pvc-pipes-headphone-stand.jpg}
+        \caption{\glsentrytext{pvc} Pipes: Headphone Stand}
+    \end{figure}
 \end{frame}
 
 \begin{frame}
+    \begin{figure}
+        % https://busybugs.co/2012/08/diy-sensory-water-table/
+        \includegraphics[width=\textwidth]{rapid-prototyping/pvc-pipes-sensory-table.jpg}
+        \caption{\glsentrytext{pvc} Pipes: Sensory/Water Table}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}
+        % https://www.pinterest.com/pin/331225747565285513/
+        \includegraphics[height=7cm]{rapid-prototyping/pvc-pipes-ipad-holder.jpg}
+        \caption{\glsentrytext{pvc} Pipes: iPad Holder}
+    \end{figure}
 \end{frame}
 
 \subsection{LocLine}
@@ -409,6 +544,13 @@
         \item Does not require special tools/machines
         \item From \acs{cnc} industry (coolant hose)
     \end{itemize}
+    \begin{figure}
+        % https://www.amazon.com/ModularHose-Compatible-Tablets-Samsung-Microsoft/dp/B087WTTMQR
+        \includegraphics<1>[height=5cm]{rapid-prototyping/locline-tablet-holder-1.jpg}
+        % https://www.pinterest.com/pin/497858933777199698/
+        \includegraphics<2>[height=5cm]{rapid-prototyping/locline-tablet-holder-2.jpg}
+        \caption{LocLine: Tablet Holder}
+    \end{figure}
 \end{frame}
 
 \appendix
