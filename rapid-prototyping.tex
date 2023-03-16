@@ -8,9 +8,9 @@
 \mail{sabic.alija@gmail.com}
 \institute{Department Electronic Engineering}
 
-\NewDocumentCommand{\res}{ m }{``\usebibentry{#1}{title}'', \usebibentry{#1}{url}, \cite{#1}}
+\NewDocumentCommand{\res}{ m }{``\textbf{\textcolor{tw-blue}{\usebibentry{#1}{title}}}'', \usebibentry{#1}{url} \cite{#1}}
+% \NewDocumentCommand{\res}{ m }{\bibentry{#1} \cite{#1}} % only supported by bibtex
 
-% \setlength{\parindent}{1em}
 \setlength{\parskip}{1em}
 
 \begin{document}
@@ -19,10 +19,10 @@
     \titlepage
 \end{frame}
 
-% \section{Introduction}
 \section{Literature}
 \begin{frame}
     \begin{itemize}
+        \item This work is heavily based on Benjamin Aigner, \acs{msc}:\newline\res{aigner:rapid-prototyping}
         \item \res{fasterman:2012}
         \item \res{benchoff:2014:1}
         \item \res{benchoff:2014:2}
