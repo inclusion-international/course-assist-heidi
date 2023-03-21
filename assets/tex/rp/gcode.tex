@@ -1,0 +1,23 @@
+\begin{frame}
+    \begin{itemize}
+        \item \acs{rs}-274, originally for \acs{cnc} machines (only for \acs{fff})
+        \item Pure text description of the execution of the commands
+        \item G-code is sent to the 3D printer either via an external medium (\acs{usb} stick, \acs{sd} card) or via cable
+        \item \texttt{G} \ldots\, movement of the tool/print head
+        \item \texttt{M} \ldots\, miscellaneous functions
+        \item \texttt{F} \ldots\, feed
+        \item \texttt{X/Y/Z} \ldots\, absolute or relative x, y, z coordinates
+    \end{itemize}
+    \begin{exampleblock}{}
+        G-code expresses the exact instructions for the 3D printer.
+        The commands are printer and material specific.
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}
+    \begin{listing}[H]
+        \inputsource[]{gcode}{gcode/example.gcode}
+        \caption{G-code example}
+        \label{lst:gcode:example}
+    \end{listing}
+\end{frame}
