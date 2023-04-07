@@ -1,5 +1,5 @@
 # Default list of files to be processed.
-@default_files = ("rapid-prototyping");
+@default_files = ("rapid-prototyping", "microcontroller");
 
 # The first parameter is the name of one of the system's environment variables for search paths.
 # The remaining parameters are values that should be in the variable.
