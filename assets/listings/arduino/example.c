@@ -1,0 +1,1 @@
+Serial.println(analogRead(A0));

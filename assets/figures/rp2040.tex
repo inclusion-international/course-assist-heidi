@@ -1,0 +1,194 @@
+\pgfmathsetmacro{\rpwidth}{3cm}
+\pgfmathsetmacro{\rpheight}{6cm}
+
+\pgfmathsetmacro{\rppadding}{0.3cm}
+\pgfmathsetmacro{\rppin}{0.375cm}
+
+\pgfmathsetmacro{\rplineouter}{0.5pt}
+\pgfmathsetmacro{\rplinepin}{0.5pt}
+
+\pgfdeclareshape{rp2040}{
+    \anchor{center}{\pgfpointorigin} % within the node, (0,0) is the center
+    \anchor{text} % this is used to center the text in the node
+    {\pgfpoint{-.5\wd\pgfnodeparttextbox}{-.5\ht\pgfnodeparttextbox}}
+
+    % Pin Assignments
+    \savedanchor\arduinoa{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+1*\rppin}}\anchor{VIN}{\arduinoa} % Pin VIN
+    \savedanchor\arduinob{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+2*\rppin}}\anchor{GNDL}{\arduinob} % Pin GND
+    \savedanchor\arduinoc{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+3*\rppin}}\anchor{REC}{\arduinoc} % Pin REC
+    \savedanchor\arduinod{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+4*\rppin}}\anchor{5V}{\arduinod} % Pin 5V
+    \savedanchor\arduinoe{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+5*\rppin}}\anchor{A7}{\arduinoe} % Pin A7
+    \savedanchor\arduinof{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+6*\rppin}}\anchor{A6}{\arduinof} % Pin A6
+    \savedanchor\arduinog{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+7*\rppin}}\anchor{A5}{\arduinog} % Pin A5
+    \savedanchor\arduinoh{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+8*\rppin}}\anchor{A4}{\arduinoh} % Pin A4
+    \savedanchor\arduinoi{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+9*\rppin}}\anchor{A3}{\arduinoi} % Pin A3
+    \savedanchor\arduinoj{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+10*\rppin}}\anchor{A2}{\arduinoj} % Pin A2
+    \savedanchor\arduinok{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+11*\rppin}}\anchor{A1}{\arduinok} % Pin A1
+    \savedanchor\arduinol{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+12*\rppin}}\anchor{A0}{\arduinol} % Pin A0
+    \savedanchor\arduinom{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+13*\rppin}}\anchor{AREF}{\arduinom} % Pin AREF
+    \savedanchor\arduinon{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+14*\rppin}}\anchor{3V3}{\arduinon} % Pin 3V3
+    \savedanchor\arduinoo{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+15*\rppin}}\anchor{D13}{\arduinoo} % Pin D13
+
+    \savedanchor\arduinoa{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+1*\rppin}}\anchor{TX}{\arduinoa} % Pin TX
+    \savedanchor\arduinob{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+2*\rppin}}\anchor{RX}{\arduinob} % Pin RX
+    \savedanchor\arduinoc{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+3*\rppin}}\anchor{RESET}{\arduinoc} % Pin RESET
+    \savedanchor\arduinod{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+4*\rppin}}\anchor{GNDR}{\arduinod} % Pin GND
+    \savedanchor\arduinoe{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+5*\rppin}}\anchor{D2}{\arduinoe} % Pin D2
+    \savedanchor\arduinof{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+6*\rppin}}\anchor{D3}{\arduinof} % Pin D3
+    \savedanchor\arduinog{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+7*\rppin}}\anchor{D4}{\arduinog} % Pin D4
+    \savedanchor\arduinoh{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+8*\rppin}}\anchor{D5}{\arduinoh} % Pin D5
+    \savedanchor\arduinoi{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+9*\rppin}}\anchor{D6}{\arduinoi} % Pin D6
+    \savedanchor\arduinoj{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+10*\rppin}}\anchor{D7}{\arduinoj} % Pin D7
+    \savedanchor\arduinok{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+11*\rppin}}\anchor{D8}{\arduinok} % Pin D8
+    \savedanchor\arduinol{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+12*\rppin}}\anchor{D9}{\arduinol} % Pin D9
+    \savedanchor\arduinom{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+13*\rppin}}\anchor{D10}{\arduinom} % Pin D10
+    \savedanchor\arduinon{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+14*\rppin}}\anchor{D11}{\arduinon} % Pin D11
+    \savedanchor\arduinoo{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+15*\rppin}}\anchor{D12}{\arduinoo} % Pin D12
+
+    \foregroundpath{
+        % Container
+        \pgfsetlinewidth{\rplineouter}
+        \pgfpathrectanglecorners{\pgfpoint{\rpwidth/2}{\rpheight/2}}{\pgfpoint{-\rpwidth/2}{-\rpheight/2}}
+        \pgfusepath{draw}
+
+        % Left Pins
+        \pgfsetlinewidth{\rplinepin}
+
+        \pgfpathmoveto{\pgfpoint{-\rpwidth/2}{-\rpheight/2+1*\rppin}} % VIN
+        \pgfpathlineto{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+1*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{-\rpwidth/2}{-\rpheight/2+2*\rppin}} % GND
+        \pgfpathlineto{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+2*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{-\rpwidth/2}{-\rpheight/2+3*\rppin}} % REC
+        \pgfpathlineto{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+3*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{-\rpwidth/2}{-\rpheight/2+4*\rppin}} % 5V
+        \pgfpathlineto{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+4*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{-\rpwidth/2}{-\rpheight/2+5*\rppin}} % A7
+        \pgfpathlineto{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+5*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{-\rpwidth/2}{-\rpheight/2+6*\rppin}} % A6
+        \pgfpathlineto{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+6*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{-\rpwidth/2}{-\rpheight/2+7*\rppin}} % A5
+        \pgfpathlineto{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+7*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{-\rpwidth/2}{-\rpheight/2+8*\rppin}} % A4
+        \pgfpathlineto{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+8*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{-\rpwidth/2}{-\rpheight/2+9*\rppin}} % A3
+        \pgfpathlineto{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+9*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{-\rpwidth/2}{-\rpheight/2+10*\rppin}} % A2
+        \pgfpathlineto{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+10*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{-\rpwidth/2}{-\rpheight/2+11*\rppin}} % A1
+        \pgfpathlineto{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+11*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{-\rpwidth/2}{-\rpheight/2+12*\rppin}} % A0
+        \pgfpathlineto{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+12*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{-\rpwidth/2}{-\rpheight/2+13*\rppin}} % AREF
+        \pgfpathlineto{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+13*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{-\rpwidth/2}{-\rpheight/2+14*\rppin}} % 3V3
+        \pgfpathlineto{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+14*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{-\rpwidth/2}{-\rpheight/2+15*\rppin}} % D13
+        \pgfpathlineto{\pgfpoint{-\rpwidth/2-\rppadding}{-\rpheight/2+15*\rppin}}
+
+        \pgfusepath{draw}
+
+        % Right Pins
+        \pgfpathmoveto{\pgfpoint{\rpwidth/2}{-\rpheight/2+1*\rppin}} % TX
+        \pgfpathlineto{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+1*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{\rpwidth/2}{-\rpheight/2+2*\rppin}} % RX
+        \pgfpathlineto{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+2*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{\rpwidth/2}{-\rpheight/2+3*\rppin}} % RESET
+        \pgfpathlineto{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+3*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{\rpwidth/2}{-\rpheight/2+4*\rppin}} % GND
+        \pgfpathlineto{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+4*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{\rpwidth/2}{-\rpheight/2+5*\rppin}} % D2
+        \pgfpathlineto{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+5*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{\rpwidth/2}{-\rpheight/2+6*\rppin}} % D3
+        \pgfpathlineto{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+6*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{\rpwidth/2}{-\rpheight/2+7*\rppin}} % D4
+        \pgfpathlineto{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+7*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{\rpwidth/2}{-\rpheight/2+8*\rppin}} % D5
+        \pgfpathlineto{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+8*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{\rpwidth/2}{-\rpheight/2+9*\rppin}} % D6
+        \pgfpathlineto{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+9*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{\rpwidth/2}{-\rpheight/2+10*\rppin}} % D7
+        \pgfpathlineto{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+10*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{\rpwidth/2}{-\rpheight/2+11*\rppin}} % D8
+        \pgfpathlineto{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+11*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{\rpwidth/2}{-\rpheight/2+12*\rppin}} % D9
+        \pgfpathlineto{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+12*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{\rpwidth/2}{-\rpheight/2+13*\rppin}} % D10
+        \pgfpathlineto{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+13*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{\rpwidth/2}{-\rpheight/2+14*\rppin}} % D11
+        \pgfpathlineto{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+14*\rppin}}
+
+        \pgfpathmoveto{\pgfpoint{\rpwidth/2}{-\rpheight/2+15*\rppin}} % D12
+        \pgfpathlineto{\pgfpoint{\rpwidth/2+\rppadding}{-\rpheight/2+15*\rppin}}
+
+        \pgfusepath{draw}
+
+        % Arduino Nano Board Name
+        \pgftext[bottom,at={\pgfpoint{0cm}{1cm}}]{\normalsize\texttt{Arduino}}
+        \pgftext[bottom,at={\pgfpoint{0cm}{0.5cm}}]{\normalsize\texttt{NANO}}
+
+        % Arduino Analog Pin Names
+        \pgftext[left,at={\pgfpoint{-\rpwidth/2+\rppadding-0.2cm}{-\rpheight/2+1*\rppin}}]{\footnotesize\texttt{VIN}}
+        \pgftext[left,at={\pgfpoint{-\rpwidth/2+\rppadding-0.2cm}{-\rpheight/2+2*\rppin}}]{\footnotesize\texttt{GND}}
+        \pgftext[left,at={\pgfpoint{-\rpwidth/2+\rppadding-0.2cm}{-\rpheight/2+3*\rppin}}]{\footnotesize\texttt{REC}}
+        \pgftext[left,at={\pgfpoint{-\rpwidth/2+\rppadding-0.2cm}{-\rpheight/2+4*\rppin}}]{\footnotesize\texttt{+5V}}
+        \pgftext[left,at={\pgfpoint{-\rpwidth/2+\rppadding-0.2cm}{-\rpheight/2+5*\rppin}}]{\footnotesize\texttt{A7}}
+        \pgftext[left,at={\pgfpoint{-\rpwidth/2+\rppadding-0.2cm}{-\rpheight/2+6*\rppin}}]{\footnotesize\texttt{A6}}
+        \pgftext[left,at={\pgfpoint{-\rpwidth/2+\rppadding-0.2cm}{-\rpheight/2+7*\rppin}}]{\footnotesize\texttt{A5}}
+        \pgftext[left,at={\pgfpoint{-\rpwidth/2+\rppadding-0.2cm}{-\rpheight/2+8*\rppin}}]{\footnotesize\texttt{A4}}
+        \pgftext[left,at={\pgfpoint{-\rpwidth/2+\rppadding-0.2cm}{-\rpheight/2+9*\rppin}}]{\footnotesize\texttt{A3}}
+        \pgftext[left,at={\pgfpoint{-\rpwidth/2+\rppadding-0.2cm}{-\rpheight/2+10*\rppin}}]{\footnotesize\texttt{A2}}
+        \pgftext[left,at={\pgfpoint{-\rpwidth/2+\rppadding-0.2cm}{-\rpheight/2+11*\rppin}}]{\footnotesize\texttt{A1}}
+        \pgftext[left,at={\pgfpoint{-\rpwidth/2+\rppadding-0.2cm}{-\rpheight/2+12*\rppin}}]{\footnotesize\texttt{A0}}
+        \pgftext[left,at={\pgfpoint{-\rpwidth/2+\rppadding-0.2cm}{-\rpheight/2+13*\rppin}}]{\footnotesize\texttt{AREF}}
+        \pgftext[left,at={\pgfpoint{-\rpwidth/2+\rppadding-0.2cm}{-\rpheight/2+14*\rppin}}]{\footnotesize\texttt{+3V3}}
+        \pgftext[left,at={\pgfpoint{-\rpwidth/2+\rppadding-0.2cm}{-\rpheight/2+15*\rppin}}]{\footnotesize\texttt{D13}}
+
+        \pgftext[right,at={\pgfpoint{\rpwidth/2-\rppadding+0.2cm}{-\rpheight/2+1*\rppin}}]{\footnotesize\texttt{TX}}
+        \pgftext[right,at={\pgfpoint{\rpwidth/2-\rppadding+0.2cm}{-\rpheight/2+2*\rppin}}]{\footnotesize\texttt{RX}}
+        \pgftext[right,at={\pgfpoint{\rpwidth/2-\rppadding+0.2cm}{-\rpheight/2+3*\rppin}}]{\footnotesize\texttt{\textasciitilde{}RESET}}
+        \pgftext[right,at={\pgfpoint{\rpwidth/2-\rppadding+0.2cm}{-\rpheight/2+4*\rppin}}]{\footnotesize\texttt{GND}}
+        \pgftext[right,at={\pgfpoint{\rpwidth/2-\rppadding+0.2cm}{-\rpheight/2+5*\rppin}}]{\footnotesize\texttt{D2}}
+        \pgftext[right,at={\pgfpoint{\rpwidth/2-\rppadding+0.2cm}{-\rpheight/2+6*\rppin}}]{\footnotesize\texttt{D3}}
+        \pgftext[right,at={\pgfpoint{\rpwidth/2-\rppadding+0.2cm}{-\rpheight/2+7*\rppin}}]{\footnotesize\texttt{D4}}
+        \pgftext[right,at={\pgfpoint{\rpwidth/2-\rppadding+0.2cm}{-\rpheight/2+8*\rppin}}]{\footnotesize\texttt{D5}}
+        \pgftext[right,at={\pgfpoint{\rpwidth/2-\rppadding+0.2cm}{-\rpheight/2+9*\rppin}}]{\footnotesize\texttt{D6}}
+        \pgftext[right,at={\pgfpoint{\rpwidth/2-\rppadding+0.2cm}{-\rpheight/2+10*\rppin}}]{\footnotesize\texttt{D7}}
+        \pgftext[right,at={\pgfpoint{\rpwidth/2-\rppadding+0.2cm}{-\rpheight/2+11*\rppin}}]{\footnotesize\texttt{D8}}
+        \pgftext[right,at={\pgfpoint{\rpwidth/2-\rppadding+0.2cm}{-\rpheight/2+12*\rppin}}]{\footnotesize\texttt{D9}}
+        \pgftext[right,at={\pgfpoint{\rpwidth/2-\rppadding+0.2cm}{-\rpheight/2+13*\rppin}}]{\footnotesize\texttt{D10}}
+        \pgftext[right,at={\pgfpoint{\rpwidth/2-\rppadding+0.2cm}{-\rpheight/2+14*\rppin}}]{\footnotesize\texttt{D11}}
+        \pgftext[right,at={\pgfpoint{\rpwidth/2-\rppadding+0.2cm}{-\rpheight/2+15*\rppin}}]{\footnotesize\texttt{D12}}
+
+        %\pgfpathmoveto{\pgfpoint{\rpwidth/2-\rppadding+0.2cm}{-\rpheight/2+3*\rppin + 0.15cm}} % D12
+        %\pgfpathlineto{\pgfpoint{\rpwidth/2-\rppadding-0.4´5cm}{-\rpheight/2+3*\rppin + 0.15cm}}
+        %\pgfusepath{draw}
+
+    }
+}
