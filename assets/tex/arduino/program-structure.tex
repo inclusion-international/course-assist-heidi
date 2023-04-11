@@ -1,0 +1,35 @@
+\begin{frame}
+    \par The Arduino\textregistered{} example ``Blink'' (see Listing \ref{lst:arduino:blinky}) is a simple and widely-used introductory program for Arduino\textregistered{} boards (cmp. ``Hello World'').
+    \par It demonstrates the basic structure of Arduino\textregistered{} code, consisting of two primary functions, \mintinline{c}{setup()} and \mintinline{c}{loop()}.
+    \begin{listing}[H]
+        \inputsource[fontsize=\fontsize{8}{8}]{c}{arduino/blink.c}
+        \caption{Arduino\textregistered{} example ``Blink''.}
+        \label{lst:arduino:blinky}
+    \end{listing}
+\end{frame}
+
+\begin{frame}
+    \par The \href{https://www.arduino.cc/reference/en/language/structure/sketch/setup/}{\mintinline{c}{setup()}} function runs once when you press reset or power the board.
+    \par Inside of it, function \mintinline{c}{pinMode()} is used to configure the \ac{led} pin as an output.
+    \begin{listing}[H]
+        \inputsource[firstline=7,lastline=10]{c}{arduino/blink.c}
+        \caption{Arduino\textregistered{} example ``Blink'': \mintinline{c}{setup()}}
+        \label{lst:arduino:blinky:setup}
+    \end{listing}
+    \vspace{-1em}
+    \par Function \href{https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/}{\mintinline{c}{pinMode(pin, mode)}} configures the specified \texttt{pin} either as an input or an output (\texttt{mode}).
+    \par Many functions accept or expect predefined \href{https://www.arduino.cc/reference/en/language/variables/constants/constants/}{constants} or macros as parameter values (e.g. \mintinline[escapeinside=||]{c}{|\#|define LED_BUILTIN 13}).
+\end{frame}
+
+\begin{frame}
+    \par The \href{https://www.arduino.cc/reference/en/language/structure/sketch/loop/}{\mintinline{c}{loop()}} function runs over and over again forever.
+    \par Functions \mintinline{c}{digitalWrite()} and \mintinline{c}{delay()} are used to toggle the \acs{led} and wait for a specific amount of time in between.
+    \begin{listing}[H]
+        \inputsource[fontsize=\fontsize{8}{8},firstline=13,lastline=18]{c}{arduino/blink.c}
+        \caption{Arduino\textregistered{} example ``Blink'': \mintinline{c}{loop()}}
+        \label{lst:arduino:blinky:loop}
+    \end{listing}
+    \vspace{-1em}
+    \par Function \href{https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/}{\mintinline{c}{digitalWrite(pin, value)}} writes a \texttt{HIGH} or a \texttt{LOW} value to a digital \texttt{pin}.
+    \par Function \href{https://www.arduino.cc/reference/en/language/functions/time/delay/}{\mintinline{c}{delay(ms)}} pauses the program for the amount of time (in milliseconds) specified.
+\end{frame}

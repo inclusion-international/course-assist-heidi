@@ -1,0 +1,56 @@
+\begin{frame}
+    % \begin{itemize}
+    %     \item Arduino\textregistered{} is an \ac{ide} for microcontrollers, supporting many different application boards
+    %     \item The software support makes it easy to use various hardware modules (e.g. \acsp{lcd}, servo motors, \ldots)
+    % \end{itemize}
+    \begin{itemize}
+        \item Open-source electronics platform
+        \item Designed for interactive projects and prototyping
+        \item Easy-to-use hardware and software
+        \item Popular among hobbyists, educators, and professionals
+    \end{itemize}
+    \par The Arduino\textregistered{} ``ecosystem'' consists of several integral compontents:
+    \begin{itemize}
+        \item Microcontroller boards (Arduino\textregistered{} boards)
+        \item \ac{io} pins for connecting electronic components
+        \item Arduino\textregistered{} programming language (based on C/C++)
+        \item \ac{ide}
+    \end{itemize}
+\end{frame}
+
+% \note[enumerate]{
+%     \item Arduino\textregistered{} is an open-source electronics platform that is designed for creating interactive projects and prototyping.
+%     It is based on easy-to-use hardware and software, making it popular among hobbyists, educators, and professionals alike.
+%     The Arduino\textregistered{} platform consists of a series of microcontroller boards and an integrated development environment (IDE) for programming the microcontroller.
+%     \item The microcontroller boards, often referred to as "Arduino\textregistered{} boards," are equipped with input/output (I/O) pins that can be used to connect various electronic components, such as sensors, motors, and displays.
+%     These boards can be programmed using the Arduino\textregistered{} programming language (based on C/C++) and the Arduino\textregistered{} IDE, allowing users to create custom code to control the hardware and implement various functionalities.
+%     \item Arduino\textregistered{} is known for its simplicity and accessibility, which has led to a large community of users who share knowledge, resources, and projects online.
+%     Its versatility has made it popular for applications in robotics, home automation, art installations, and many other fields.
+% }
+
+\begin{frame}
+    \par Provides classes for easier programming:
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{listing}[H]
+                \inputsource[fontsize=\fontsize{6}{6},linenos=false]{c}{arduino/example-rtl.c}
+                \caption{Code for microcontrollers without Arduino\textregistered{} libraries (\textit{Register-Level}).}
+                \label{lst:arduino:example:rtl}
+            \end{listing}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \onslide<3>{
+                \begin{listing}[H]
+                    \inputsource[fontsize=\fontsize{6}{6},linenos=false]{c}{arduino/example.c}
+                    \caption{Code for microcontrollers with Arduino\textregistered{} libraries (\textit{\acl{sdk}}).}
+                    \label{lst:arduino:example}
+                \end{listing}
+            }
+        \end{column}
+    \end{columns}
+    \onslide<2->{
+        \begin{tikzpicture}[overlay]
+            \draw [-latex,double,color=tw-blue,line width=0.4mm] (4.5,3) -- +(1,0);
+        \end{tikzpicture}
+    }
+\end{frame}

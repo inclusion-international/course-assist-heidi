@@ -1,0 +1,24 @@
+\begin{frame}
+    \begin{exampleblock}{Exercise III}
+        \begin{enumerate}
+            \item Get the Arduino\textregistered{} \acs{ide} of your choice.
+            \item Connect your board to your \acs{pc}.
+            \item Install MicroPython on your board.
+            \item Recreate the function of ``Exercise II''.
+            \item Extend the example project to log \texttt{On} and \texttt{Off} to the console.% of your \acs{pc} when toggling the \acs{led}.
+        \end{enumerate}
+        % \par Hint:
+        % \begin{itemize}
+        %     \item \href{https://www.arduino.cc/reference/en/language/functions/communication/serial/begin/}{\mintinline{c}{Serial.begin()}}
+        %     \item \href{https://www.arduino.cc/reference/en/language/functions/communication/serial/println/}{\mintinline{c}{Serial.println()}}
+        % \end{itemize}
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Solution: Exercise III}
+    \begin{listing}[H]
+        \inputsource[fontsize=\fontsize{8}{8}]{py}{arduino/blink-external.py}
+        \caption{Solution for Exercise III.}
+        \label{lst:arduino:exercise:3:solution}
+    \end{listing}
+\end{frame}
