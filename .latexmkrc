@@ -76,3 +76,12 @@ sub makeglossaries {
     if ($silent) { unshift @args, "-q"; }
     return system "makeglossaries", "-d", "$path", $basename
 }
+
+add_cus_dep( 'svg', 'pdf', 0, 'svg2pdf');
+sub svg2pdf {
+    $input = "\"$_[0].svg\"", $temp = "\"$_[0].temp.svg\"", $min = "\"$_[0].min.svg\"", $output = "\"$_[0].pdf\"";
+    system("inkscape --actions=\"select-all;selection-ungroup;select-clear;select-by-element:\"path\";object-stroke-to-path;export-filename:$temp;export-do;\" $input");
+    system("scour -i $temp -o $min --enable-id-stripping --enable-comment-stripping --shorten-ids --indent=none");
+    system("inkscape --actions=\"export-area-page;export-filename:$output;export-do;\" $min");
+    return system("rm $temp $min");
+}
