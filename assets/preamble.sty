@@ -45,10 +45,12 @@
 
 % Custom
 \NewDocumentCommand{\res}{ m }{``\textbf{\usebibentry{#1}{title}}'', \usebibentry{#1}{url} \cite{#1}}
+\NewDocumentCommand{\key}{ O{} O{} m }{\tikz[baseline=(key.base),#1]\node[fill=tw-gray!20!white,draw,shape=rectangle,inner sep=0.25em,rounded corners=0.125em,drop shadow={shadow xshift=0.125em,shadow yshift=-0.125em,color=tw-gray},#2](key){#3};}
 \setlength{\parskip}{1em}
 
 % Circuits
 \input{figures/rp2040}
+\input{figures/resistor}
 
 \newcommand{\iarronly}[1]{% name
     \node [currarrow, color=red, anchor=center,rotate=\ctikzgetdirection{#1-Iarrow}] at (#1-Ipos) {};
@@ -62,5 +64,5 @@
     % draw an arrow of a fixed size around that center and on the same line
     \draw[-Triangle, #4] ($(#2-Vcenter)!#1!(#2-Vfrom)$) -- ($(#2-Vcenter)!#1!(#2-Vto)$);
     % position the label as in the normal voltages
-    \node[anchor=\ctikzgetanchor{#2}{Vlab}, #4] at (#2-Vlab) {#3};
+    \node[anchor=\ctikzgetanchor{#2}{Vlab}, #4] at ($(#2-Vlab) + (0.35,0)$) {#3};
 }
