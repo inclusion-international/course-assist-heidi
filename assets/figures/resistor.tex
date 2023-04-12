@@ -1,0 +1,91 @@
+\definecolor{gold}{rgb}{0.85, 0.64, 0.12}
+\definecolor{silver}{rgb}{0.75, 0.75, 0.75}
+
+\pgfkeys{
+    /tikz/res/.cd,
+    first/.initial=red,
+    second/.initial=brown,
+    third/.initial=black,
+    fourth/.initial=red,
+    fifth/.initial=gold,
+    sixth/.initial=silver,
+}
+
+\pgfdeclareshape{res}{
+    % Anchor definition (e.g., center, north, south, etc.)
+    \anchor{center}{\pgfpointorigin}
+    \anchor{west}{\pgfpoint{0}{0.7cm}}
+    \anchor{east}{\pgfpoint{4.4cm}{0.7cm}}
+    \anchor{C1north}{\pgfpoint{0.825cm}{1.4cm}}
+    \anchor{C1south}{\pgfpoint{0.825cm}{0}}
+    \anchor{C2north}{\pgfpoint{1.475cm}{1.2cm}}
+    \anchor{C2south}{\pgfpoint{1.475cm}{0.2cm}}
+    \anchor{C3north}{\pgfpoint{2.125cm}{1.2cm}}
+    \anchor{C3south}{\pgfpoint{2.125cm}{0.2cm}}
+    \anchor{C4north}{\pgfpoint{2.775cm}{1.2cm}}
+    \anchor{C4south}{\pgfpoint{2.775cm}{0.2cm}}
+    \anchor{C5north}{\pgfpoint{3.625cm}{1.4cm}}
+    \anchor{C5south}{\pgfpoint{3.625cm}{0}}
+    \anchor{C6north}{\pgfpoint{4.125cm}{1.4cm}}
+    \anchor{C6south}{\pgfpoint{4.125cm}{0}}
+
+    % Background path definition
+    \beforebackgroundpath{
+        \pgfkeysgetvalue{/tikz/res/first}{\firstColor}
+        \pgfsetfillcolor{\firstColor}
+        \pgfpathrectanglecorners{\pgfpoint{0.65cm}{0cm}}{\pgfpoint{1cm}{1.4cm}}
+        \pgfusepath{fill}
+        \pgfkeysgetvalue{/tikz/res/second}{\secondColor}
+        \pgfsetfillcolor{\secondColor}
+        \pgfpathrectanglecorners{\pgfpoint{1.3cm}{0.2cm}}{\pgfpoint{1.65cm}{1.2cm}}
+        \pgfusepath{fill}
+        \pgfkeysgetvalue{/tikz/res/third}{\thirdColor}
+        \pgfsetfillcolor{\thirdColor}
+        \pgfpathrectanglecorners{\pgfpoint{1.95cm}{0.2cm}}{\pgfpoint{2.3cm}{1.2cm}}
+        \pgfusepath{fill}
+        \pgfkeysgetvalue{/tikz/res/fourth}{\fourthColor}
+        \pgfsetfillcolor{\fourthColor}
+        \pgfpathrectanglecorners{\pgfpoint{2.6cm}{0.2cm}}{\pgfpoint{2.95cm}{1.2cm}}
+        \pgfusepath{fill}
+        \pgfkeysgetvalue{/tikz/res/fifth}{\fifthColor}
+        \pgfsetfillcolor{\fifthColor}
+        \pgfpathrectanglecorners{\pgfpoint{3.45cm}{0cm}}{\pgfpoint{3.8cm}{1.4cm}}
+        \pgfusepath{fill}
+        \pgfkeysgetvalue{/tikz/res/sixth}{\sixthColor}
+        \pgfsetfillcolor{\sixthColor}
+        \pgfpathrectanglecorners{\pgfpoint{3.95cm}{0cm}}{\pgfpoint{4.3cm}{1.4cm}}
+        \pgfusepath{fill}
+
+        %\pgfsetpathcolor{red}
+        \pgfpathmoveto{\pgfpoint{0cm}{0cm}}
+        \pgfpathlineto{\pgfpoint{0cm}{1.4cm}}
+        \pgfpathlineto{\pgfpoint{1cm}{1.4cm}}
+        \pgfpathlineto{\pgfpoint{1.2cm}{1.2cm}}
+        \pgfpathlineto{\pgfpoint{3.2cm}{1.2cm}}
+        \pgfpathlineto{\pgfpoint{3.4cm}{1.4cm}}
+        \pgfpathlineto{\pgfpoint{4.4cm}{1.4cm}}
+        \pgfpathlineto{\pgfpoint{4.4cm}{0cm}}
+        \pgfpathlineto{\pgfpoint{3.4cm}{0cm}}
+        \pgfpathlineto{\pgfpoint{3.2cm}{0.2cm}}
+        \pgfpathlineto{\pgfpoint{1.2cm}{0.2cm}}
+        \pgfpathlineto{\pgfpoint{1cm}{0cm}}
+        \pgfpathclose
+        \pgfusepath{draw}
+    }
+    \backgroundpath{
+        % Define the path for the shape
+        \pgfpathmoveto{\pgfpoint{0cm}{0cm}}
+        \pgfpathlineto{\pgfpoint{0cm}{1.4cm}}
+        \pgfpathlineto{\pgfpoint{1cm}{1.4cm}}
+        \pgfpathlineto{\pgfpoint{1.2cm}{1.2cm}}
+        \pgfpathlineto{\pgfpoint{3.2cm}{1.2cm}}
+        \pgfpathlineto{\pgfpoint{3.4cm}{1.4cm}}
+        \pgfpathlineto{\pgfpoint{4.4cm}{1.4cm}}
+        \pgfpathlineto{\pgfpoint{4.4cm}{0cm}}
+        \pgfpathlineto{\pgfpoint{3.4cm}{0cm}}
+        \pgfpathlineto{\pgfpoint{3.2cm}{0.2cm}}
+        \pgfpathlineto{\pgfpoint{1.2cm}{0.2cm}}
+        \pgfpathlineto{\pgfpoint{1cm}{0cm}}
+        \pgfpathclose
+    }
+}

@@ -2,10 +2,10 @@
     \begin{exampleblock}{Exercise I}
         \begin{enumerate}
             \item Get the Arduino\textregistered{} \acs{ide} of your choice.
-            \item Connect your board to your \acs{pc}.
+            \item Connect the board to your \acs{pc}.
             \item Install the \ac{bsp} for your board.
             \item Run the example project ``Blink''.
-            \item Extend the example project to log \texttt{On} and \texttt{Off} to the terminal.% of your \acs{pc} when toggling the \acs{led}.
+            \item Extend the example project to log \texttt{On} or \texttt{Off} when toggling the \acs{led}.
         \end{enumerate}
         \par Hint:
         \begin{itemize}
@@ -16,20 +16,20 @@
 \end{frame}
 
 \begin{frame}{Solution: Exercise I}
+    \begin{listing}[H]
+        \inputsource[fontsize=\fontsize{8}{8}]{c}{arduino/blink-logging.c}
+        \caption{Solution for Exercise I.}
+        \label{lst:arduino:exercise:1:solution}
+    \end{listing}
+\end{frame}
+
+\begin{frame}{Solution: Exercise I}
     \begin{figure}
         \begin{tikzpicture}
             \draw (2,4) node[rp2040] (rp20401) {};
         \end{tikzpicture}
         \caption{Circuit for Exercise I}
     \end{figure}
-\end{frame}
-
-\begin{frame}{Solution: Exercise I}
-    \begin{listing}[H]
-        \inputsource[fontsize=\fontsize{8}{8}]{c}{arduino/blink-logging.c}
-        \caption{Solution for Exercise I.}
-        \label{lst:arduino:exercise:1:solution}
-    \end{listing}
 \end{frame}
 
 \begin{frame}{Solution: Exercise I}

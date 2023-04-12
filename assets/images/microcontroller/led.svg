@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.96123036"
-     inkscape:cx="-112.87617"
-     inkscape:cy="80.105668"
+     inkscape:zoom="10.87508"
+     inkscape:cx="5.2873174"
+     inkscape:cy="39.264079"
      inkscape:window-width="2560"
      inkscape:window-height="1403"
      inkscape:window-x="2560"
@@ -975,7 +975,7 @@
     <g
        id="use4356"
        clip-path="url(#clip48)"
-       style="clip-rule:nonzero"
+       style="clip-rule:nonzero;opacity:0.5"
        transform="matrix(0.35277777,0,0,0.35277777,102.02924,127.24708)">
       <g
          clip-path="url(#clip49)"
@@ -1018,7 +1018,7 @@
     <g
        id="use4364"
        clip-path="url(#clip55)"
-       style="clip-rule:nonzero"
+       style="clip-rule:nonzero;opacity:0.5"
        transform="matrix(0.35277777,0,0,0.35277777,102.02924,127.95263)">
       <g
          clip-path="url(#clip56)"

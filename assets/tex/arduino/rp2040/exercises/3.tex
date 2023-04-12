@@ -1,11 +1,11 @@
 \begin{frame}
     \begin{exampleblock}{Exercise III}
         \begin{enumerate}
-            \item Get the Arduino\textregistered{} \acs{ide} of your choice.
-            \item Connect your board to your \acs{pc}.
-            \item Install MicroPython on your board.
-            \item Recreate the function of ``Exercise II''.
-            \item Extend the example project to log \texttt{On} and \texttt{Off} to the console.% of your \acs{pc} when toggling the \acs{led}.
+            \item Get \href{https://docs.arduino.cc/micropython/basics/code-editors}{Arduino\textregistered{} Lab for MicroPython}.
+            \item Connect the board to your \acs{pc}.
+            \item \href{https://docs.arduino.cc/tutorials/nano-rp2040-connect/rp2040-python-api\#micropython-installation}{Install MicroPython on your board}.
+            \item Control the pin connected to the \acs{led} instead of the on-board \acs{led}.
+            \item Log \texttt{On} or \texttt{Off} to the console when toggling the \acs{led}.
         \end{enumerate}
         % \par Hint:
         % \begin{itemize}
@@ -21,4 +21,26 @@
         \caption{Solution for Exercise III.}
         \label{lst:arduino:exercise:3:solution}
     \end{listing}
+\end{frame}
+
+\begin{frame}{Solution: Exercise III}
+    \begin{figure}
+        \begin{tikzpicture}
+            \ctikzset{bipoles/length=1cm, !vi/.style={no v symbols, no i symbols}, bipole voltage style/.style={text opacity=0}, bipole current style/.style={color=ttw-red}}
+            \draw (2,4) node[rp2040] (rp20401) {}
+            (rp20401.D2) to ++(1,0) to ++(0,4) to ++(2,0) to ++(0,-1) to [R,name=R,l={$R_1 = \SI{220}{\ohm}$},v=$U_1$,voltage shift=3.5,!vi] ++(0,-1) to [leDo,name=LED,l=$D_1$,v=$U_2$,i=$i$,voltage shift=3.5,!vi] ++(0,-2)
+            (rp20401.GNDR) to ++(3,0) to ++(0,1);
+            \fixedvlen[0.5cm]{R}{$U_1$}[tw-blue]
+            \fixedvlen[0.5cm]{LED}{$U_2$}[tw-blue]
+            \iarronly{LED}
+        \end{tikzpicture}
+        \caption{Circuit for Exercise III}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Solution: Exercise III}
+    \begin{figure}
+        \includegraphics[width=0.35\textwidth]{images/microcontroller/exercises/exercise-2-solution.pdf}
+        \caption{Solution for Exercise III.}
+    \end{figure}
 \end{frame}
