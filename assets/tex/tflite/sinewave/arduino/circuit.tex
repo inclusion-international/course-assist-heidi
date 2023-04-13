@@ -1,0 +1,14 @@
+\begin{frame}
+    \begin{figure}
+        \begin{tikzpicture}
+            \ctikzset{bipoles/length=1cm, !vi/.style={no v symbols, no i symbols}, bipole voltage style/.style={text opacity=0}, bipole current style/.style={color=ttw-red}}
+            \draw (2,4) node[rp2040] (rp20401) {}
+            (rp20401.D2) to ++(1,0) to ++(0,4) to ++(2,0) to ++(0,-1) to [R,name=R,l={$R_1 = \SI{220}{\ohm}$},v=$U_1$,voltage shift=3.5,!vi] ++(0,-1) to [leDo,name=LED,l=$D_1$,v=$U_2$,i=$i$,voltage shift=3.5,!vi] ++(0,-2)
+            (rp20401.GNDR) to ++(3,0) to ++(0,1);
+            \fixedvlen[0.5cm]{R}{$U_1$}[tw-blue]
+            \fixedvlen[0.5cm]{LED}{$U_2$}[tw-blue]
+            \iarronly{LED}
+        \end{tikzpicture}
+        \caption{Project Circuit.}
+    \end{figure}
+\end{frame}

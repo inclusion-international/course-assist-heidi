@@ -1,0 +1,38 @@
+\begin{frame}
+    \begin{figure}
+        \resizebox{\textwidth}{!}{
+            \begin{tikzpicture}[x=2cm, y=2cm, >=stealth, rotate=-90]
+                % input layer
+                \node[circle, draw=black, fill=tw-blue, thick, minimum size=1.4cm, text=white, font=\fontsize{24}{24}] (x) at (0,0) {$x$};
+                \node[font=\fontsize{24}{24}\selectfont, anchor=west] at  (0, 9) {Input Layer};
+
+                % hidden layers
+                \foreach \y in {1,...,16}
+                \node[circle, draw=black, fill=tw-gray!80, thick, minimum size=1.6cm, text=white, font=\fontsize{14}{14}] (h1-\y) at (2,\y-8) {$h^{(1)}_{\y}$};
+                \node[font=\fontsize{24}{24}\selectfont, anchor=west] at  (2, 9) {$1^{st}$ Hidden Layer};
+
+                \foreach \y in {1,...,16}
+                \node[circle, draw=black, fill=tw-gray, thick, minimum size=1.6cm, text=white, font=\fontsize{14}{14}] (h2-\y) at (4,\y-8) {$h^{(2)}_{\y}$};
+                \node[font=\fontsize{24}{24}\selectfont, anchor=west] at  (4, 9) {$2^{nd}$ Hidden Layer};
+
+                % output layer
+                \node[circle, draw=black, fill=tw-green, thick, minimum size=1.4cm, text=white, font=\fontsize{18}{18}] (y) at (6,0) {$y$};
+                \node[font=\fontsize{24}{24}\selectfont, anchor=west] at  (6, 9) {Output Layer};
+
+                % connections
+                \begin{scope}[on background layer]
+                    \foreach \y in {1,...,16}
+                    \draw[->, thick] (x) -- (h1-\y);
+
+                    \foreach \y in {1,...,16}
+                    \foreach \z in {1,...,16}
+                    \draw[->, line width=0.05mm, draw=tw-gray] (h1-\y) -- (h2-\z);
+
+                    \foreach \y in {1,...,16}
+                    \draw[->, thick] (h2-\y) -- (y);
+                \end{scope}
+            \end{tikzpicture}
+        }
+        \caption{Model design.}
+    \end{figure}
+\end{frame}

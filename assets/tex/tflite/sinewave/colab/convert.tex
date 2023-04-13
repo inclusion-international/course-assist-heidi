@@ -1,0 +1,21 @@
+\begin{frame}
+    \par The TensorFlow Lite Model file can be inspected with programs such as \href{https://github.com/lutzroeder/netron}{Netron} (\href{https://netron.app/}{Netron Browser App}).
+    \begin{listing}[H]
+        \inputsource[fontsize=\fontsize{9}{10}, firstline=107, lastline=112]{py}{tflite/tflite_sinewave_training.py}
+        \caption{Convert to TensorFlow Lite model.}
+        \label{lst:tflite:sinewave:tflite_model}
+    \end{listing}
+    \begin{listing}[H]
+        \inputsource[fontsize=\fontsize{9}{10}, firstline=142]{py}{tflite/tflite_sinewave_training.py}
+        \caption{Convert to C source file.}
+        \label{lst:tflite:sinewave:tflite_model:c}
+    \end{listing}
+\end{frame}
+
+\begin{frame}
+    \begin{listing}[H]
+        \inputsource[fontsize=\fontsize{9}{10}, firstline=114, lastline=140]{py}{tflite/tflite_sinewave_training.py}
+        \caption{Converter function.}
+        \label{lst:tflite:sinewave:tflite_model:c:converter}
+    \end{listing}
+\end{frame}

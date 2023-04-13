@@ -1,0 +1,26 @@
+\begin{frame}[fragile]
+    \par Create a new project using the Arduino\textregistered{} \acs{ide} and copy the file (\texttt{sine\_model.h}, downloaded from Google) Colab to your project folder.
+    \begin{listing}[H]
+        \inputsource[fontsize=\fontsize{8}{8}, lastline=7]{c}{arduino/sine_model.h}[hidealllines=true, tikzsetting={draw=black, line width=0.35pt}, leftline=true, rightline=true, topline=true]
+        \vspace{-1.25em}
+        \begin{mdframed}[hidealllines=true, tikzsetting={draw=black, line width=0.35pt}, leftline=true, rightline=true]
+            \begin{minted}[gobble=14, fontsize=\fontsize{8}{8}, linenos=false]{c}
+                ...
+            \end{minted}
+        \end{mdframed}
+        \vspace{-1.25em}
+        \inputsource[fontsize=\fontsize{8}{8}, firstline=268]{c}{arduino/sine_model.h}[hidealllines=true, tikzsetting={draw=black, line width=0.35pt}, leftline=true, rightline=true, bottomline=true]
+        \caption{Created model as C array (\texttt{sine\_model.h}).}
+        \label{lst:tflite:sinewave:model:c_array}
+    \end{listing}
+    \par Alternatively, you can create a \texttt{C/C++} source file using \texttt{xxd} (Linux).
+    \begin{listing}[H]
+        \begin{mdframed}
+            \begin{minted}[autogobble, linenos=false]{sh}
+                xxd -i sine_model.tflite > sine_model.cc
+            \end{minted}
+        \end{mdframed}
+        \caption{Download TensorFlow Lite.}
+        \label{lst:tflite:sinewave:model:conversion}
+    \end{listing}
+\end{frame}
