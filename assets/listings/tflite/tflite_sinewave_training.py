@@ -20,7 +20,7 @@ import math
 from tensorflow.keras import layers
 
 # Print versions
-!python - -version
+!python --version
 print('Numpy ' + np.__version__)
 print('TensorFlow ' + tf.__version__)
 print('Keras ' + tf.keras.__version__)
