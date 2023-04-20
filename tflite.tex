@@ -15,12 +15,21 @@
     \titlepage
 \end{frame}
 
-\section{Introduction}
+\section{TensorFlow}
+\begin{frame}
+    \par \href{https://www.tensorflow.org/}{TensorFlow} is a powerful open-source machine learning framework developed by Google.
+    It is widely used in various fields, including computer vision, natural language processing, and deep learning.
+    TensorFlow provides a platform for building and training machine learning models that can be deployed in various applications.
+    \par \href{https://www.tensorflow.org/lite}{TensorFlow Lite} is a lightweight version of TensorFlow designed for mobile and embedded devices.
+    It enables developers to run machine learning models on devices with limited resources, such as smartphones, tablets, and IoT devices.
+    TensorFlow Lite offers optimized performance, smaller model sizes, and lower power consumption compared to the standard version of TensorFlow.
+\end{frame}
 
+\section{Introduction}
 \begin{frame}
     \begin{figure}
         \includegraphics[width=0.85\textwidth]{images/tflite/sinewave-model-overview.jpg}
-        \caption{Goal description.}
+        \caption{\glsentrydesc{ml} model workflow.}
     \end{figure}
 \end{frame}
 
@@ -43,6 +52,8 @@
 \input{ml/tf/lite/sinewave/colab/test}
 \subsection{Convert}
 \input{ml/tf/lite/sinewave/colab/convert}
+\subsection{Resources}
+\input{ml/resources}
 
 \section{Inference}
 \subsection{Installation}
