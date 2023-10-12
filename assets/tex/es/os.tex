@@ -2,7 +2,7 @@
     \resizebox{\linewidth}{!}{
         \begin{minipage}[t]{1.1\textwidth}
             \begin{itemize}
-                \item<1-> Bare-metal programming
+                \item<2-> Bare-metal programming
                     \begin{itemize}
                         \item ``Infinite loop''
                         \item Little or no software overhead
@@ -10,7 +10,7 @@
                         \item Single-purpose or simple applications, hardware-dependent
                         \item Strict timing (e.g. motor control)
                     \end{itemize}
-                \item<2-> \ac{rtos}
+                \item<4-> \ac{rtos}
                     \begin{itemize}
                         \item Scheduler overhead
                         \item More powerful microcontroller required
@@ -18,7 +18,7 @@
                         \item Multithreading, some common libraries
                         \item Multiple tasks: networking, user interface, etc.
                     \end{itemize}
-                \item<3-> Embedded \ac{gpos}
+                \item<6-> Embedded \ac{gpos}
                     \begin{itemize}
                         \item Large overhead (scheduler, memory management, background tasks, \ldots)
                         \item Microprocessor usually required (and often external \acs{ram} and \acs{nvm})
@@ -29,19 +29,19 @@
             \end{itemize}
         \end{minipage}%
         \begin{minipage}[t]{0.35\textwidth}
-            \onslide<1->{
+            \onslide<3->{
                 \begin{figure}
                     \includegraphics[height=2cm]{microcontroller/arduino/boards/uno.jpg}
                     \caption{\href{https://store.arduino.cc/products/arduino-uno-rev3}{Arduino\textregistered{} Uno}}
                 \end{figure}
             }
-            \onslide<2->{
+            \onslide<5->{
                 \begin{figure}
                     \includegraphics[height=2cm]{microcontroller/boards/esp32-s3-devkitc-1-v1-isometric.png}
                     \caption{\href{https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html}{ESP32-S3 DevKitC-1}}
                 \end{figure}
             }
-            \onslide<3->{
+            \onslide<7->{
                 \begin{figure}
                     \includegraphics[height=2cm]{microcontroller/boards/stm32mp157d-dk1.jpg}
                     \caption{\href{https://www.st.com/en/evaluation-tools/stm32mp157d-dk1.html}{STM32MP157D-DK1}}

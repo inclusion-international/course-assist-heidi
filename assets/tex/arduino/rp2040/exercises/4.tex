@@ -23,7 +23,8 @@
 
 \begin{frame}{Solution: Exercise IV}
     \begin{listing}[H]
-        \inputsource[fontsize=\fontsize{8}{8}, firstline=1, lastline=10]{c}{arduino/https-request.c}[hidealllines=true, tikzsetting={draw=black, line width=0.35pt}, leftline=true, rightline=true, topline=true]
+        \only<1>{\inputsource[fontsize=\fontsize{8}{8}, firstline=1, lastline=10]{c}{arduino/https-request.c}[hidealllines=true, tikzsetting={draw=black, line width=0.35pt}, leftline=true, rightline=true, topline=true]}
+        \only<2>{\inputsource[fontsize=\fontsize{8}{8}, firstline=1, lastline=10, highlightlines=10]{c}{arduino/https-request.c}[hidealllines=true, tikzsetting={draw=black, line width=0.35pt}, leftline=true, rightline=true, topline=true]}
         \vspace{-1.25em}
         \inputsource[fontsize=\fontsize{8}{8}, firstline=38, lastline=38]{c}{arduino/https-request.c}[hidealllines=true, tikzsetting={draw=black, line width=0.35pt}, leftline=true, rightline=true]
         \vspace{-1.25em}
@@ -41,7 +42,8 @@
 
 \begin{frame}{Solution: Exercise IV}
     \begin{listing}[H]
-        \inputsource[fontsize=\fontsize{8}{8}, firstline=10, lastline=38]{c}{arduino/https-request.c}
+        \only<1>{\inputsource[fontsize=\fontsize{8}{8}, firstline=10, lastline=38]{c}{arduino/https-request.c}}
+        \only<2>{\inputsource[fontsize=\fontsize{8}{8}, firstline=10, lastline=38, highlightlines=26]{c}{arduino/https-request.c}}
         \caption{Solution for Exercise IV (\mintinline{c}{setup()}).}
         \label{lst:arduino:exercise:4:solution:part:1}
     \end{listing}
