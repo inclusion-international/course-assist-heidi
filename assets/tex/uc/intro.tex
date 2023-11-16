@@ -29,3 +29,40 @@
         \caption{ESP32 Functional Block Diagram}
     \end{figure}
 \end{frame}
+
+\begin{frame}{What is a Microcontroller?}
+    \begin{itemize}
+        \item A \acf{mcu} is a compact integrated circuit designed to govern specific operations in an embedded system.
+        \item Unlike a general-purpose computer, a microcontroller performs a focused set of tasks, often with \textit{real-time} constraints.
+        \item Core Components:
+        \begin{itemize}
+            \item \textbf{Central Processing Unit (CPU)}: Executes program instructions stored in memory.
+            \item \textbf{Memory}:
+                \begin{itemize}
+                    \item \textit{Program Memory (Flash)}: Stores the program code.
+                    \item \textit{Data Memory (\acs{ram})}: Stores temporary data.
+                \end{itemize}
+            \item \textbf{\acf{io} Peripherals}: Interfaces with other parts of the system, like sensors, displays, etc.
+            \item \textbf{Other peripherals}: Timers, communication ports, etc.
+        \end{itemize}
+        \item Microcontrollers are often described by their memory size, and the nature and number of \acs{io} ports and peripherals.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Comparing \glsentrytext{mcu}, \glsentrytext{mpu}, and \glsentrytext{dsp}}
+    \begin{table}
+        \resizebox{\linewidth}{!}{
+            \begin{tblr}{width=1.5\linewidth, colspec={X[2]X[3]X[3]X[3]}, hlines, row{1}={font=\bf}}
+                Aspect               & \acs{mcu}                                & \acs{mpu}                                 & \acs{dsp} \\
+                Purpose              & Specific tasks                           & General computing                         & Signal processing \\
+                \acs{cpu}            & Integrated                               & Separate                                  & Specialized \\
+                Memory               & On-chip                                  & External                                  & Often on-chip \\
+                \acs{io} Ports       & Integrated                               & External                                  & Integrated/External \\
+                Cost                 & Lower                                    & Higher                                    & Varies \\
+                Complexity           & Lower                                    & Higher                                    & Moderate \\
+                Performance          & Moderate                                 & High                                      & High (in signal processing) \\
+                Application \newline Examples & Embedded systems, \newline automation    & \acs{pc}, Servers, \newline workstations  & Audio processing, \newline image processing \\
+            \end{tblr}
+        }
+    \end{table}
+\end{frame}
